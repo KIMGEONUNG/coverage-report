@@ -35,12 +35,33 @@ namespace CoverageReporter
         /// </summary>
         public static readonly string TargetJson;
 
+        /// <summary>
+        /// ReportGenerator execution path
+        /// </summary>
         public static readonly string report_generator_path;
+
+        /// <summary>
+        /// OpenCover execution program path
+        /// </summary>
         public static readonly string open_cover_path;
+
+        /// <summary>
+        /// Test execution program path
+        /// </summary>
         public static readonly string vs_test_path;
+
+        /// <summary>
+        /// Coverage xml file root directory path
+        /// </summary>
         public static readonly string coverage_path;
+        /// <summary>
+        /// Report result root directory path
+        /// </summary>
         public static readonly string report_path;
 
+        /// <summary>
+        /// target projects where the auto-generated report expected
+        /// </summary>
         public static readonly ReportTarget[] ReportTargets;
 
         static Config()

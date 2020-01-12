@@ -9,20 +9,35 @@ using System.Threading.Tasks;
 
 namespace CoverageReporter.Core
 {
+    /// <summary>
+    /// Abstract class for all executors
+    /// </summary>
     public abstract class ExecutorBase
     {
+        /// <summary>
+        /// Target exe file path
+        /// </summary>
         protected string _exePath;
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ExecutorBase(string exePath)
         {
             _exePath = exePath;
         }
 
+        /// <summary>
+        /// Exe file path surrounded by " charater
+        /// </summary>
         public string GetExePath()
         {
-            return Surrounder.SurroundWith("\"", _exePath);
+            return StringModifier.SurroundWith("\"", _exePath);
         }
 
+        /// <summary>
+        /// Auto-generated argument  string
+        /// </summary>
         public string GetArgsString()
         {
             var ops = new List<string>();
@@ -35,7 +50,7 @@ namespace CoverageReporter.Core
                 {
                     string optionName = item.Name;
                     string value = (string)item.GetValue(this);
-                    string surroundedValue = Surrounder.SurroundWith("\"", value);
+                    string surroundedValue = StringModifier.SurroundWith("\"", value);
                     string op = $"-{optionName}:{surroundedValue}";
 
                     ops.Add(op);
@@ -48,6 +63,9 @@ namespace CoverageReporter.Core
 
         }
 
+        /// <summary>
+        /// Execute the target exe program
+        /// </summary>
         public void Execute()
         {
             string exePath = GetExePath();
@@ -59,9 +77,15 @@ namespace CoverageReporter.Core
             process.WaitForExit();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         [AttributeUsage(AttributeTargets.Field)]
         protected class OptionAttribute : Attribute
         {
+            /// <summary>
+            /// Default constructor
+            /// </summary>
             public OptionAttribute()
             {
 

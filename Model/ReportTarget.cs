@@ -24,6 +24,9 @@ namespace CoverageReporter.Model
         /// </summary>
         public string SourcePath { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public ReportTarget(string name, string targetDll, string sourcePath)
         {
             this.Name = name;
