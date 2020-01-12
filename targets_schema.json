@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "projects": {
+      "type": "array",
+      "description": "target projects",
+      "items": {
+        "$ref": "#/definitions/Project"
+      },
+      "minItems": 1
+    }
+  },
+  "required": [ "projects" ],
+
+  "definitions": {
+    "Project": {
+      "type": "object",
+      "description": "target project information",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "sourcedir": {
+          "type": "string"
+        },
+        "dll": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "dll", "sourcedir" ]
+    }
+  }
+}

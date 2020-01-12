@@ -1,0 +1,9 @@
+{
+  "projects": [
+    {
+      "name" : "test_target",
+      "sourcedir": "C:\\Users\\saywo\\source\\repos\\CoverageReporterSolution\\CoverageReporter",
+      "dll": "C:\\Users\\saywo\\source\\repos\\CoverageReporterSolution\\CoverageReporterTest\\bin\\Debug\\CoverageReporterTest.dll"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "title": "JSON Schema for my JSON file format",
+
+  "type": "object",
+
+  "properties": {
+    "report_generator_path": {
+      "type": "string",
+      "description": "ReportGenerator.exe path"
+    },
+    "open_cover_path": {
+      "type": "string",
+      "description": "OpenCover.Console.exe path"
+    },
+    "vs_test_path": {
+      "type": "string",
+      "description": "vstest.console.exe path"
+    },
+    "coverage_path": {
+      "type": "string",
+      "description": "This is for folder to save OpenCover result"
+    },
+    "report_path": {
+      "type": "string",
+      "description": "This is for folder to save ReportGenerator result"
+    }
+  },
+  "required": [ "coverage_path", "open_cover_path", "report_generator_path", "report_path", "vs_test_path" ]
+}

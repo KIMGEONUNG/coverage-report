@@ -1,0 +1,7 @@
+{
+  "report_generator_path": "C:\\ReportGenerator_4.4.0\\net47\\ReportGenerator.exe",
+  "open_cover_path": "C:\\Users\\saywo\\AppData\\Local\\Apps\\OpenCover\\OpenCover.Console.exe",
+  "vs_test_path": "C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TestWindow\\vstest.console.exe",
+  "coverage_path": "C:\\converage",
+  "report_path": "C:\\converage_report"
+}
