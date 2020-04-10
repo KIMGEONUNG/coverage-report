@@ -66,10 +66,12 @@ namespace CoverageReporter
 
         static Config()
         {
-            string jsonConfigPath = @"./config.json";
-            string jsonConfigSchemaPath = @"./config_schema.json";
-            string jsonTargetPath = @"./targets.json";
-            string jsonTargetSchemaPath = @"./targets_schema.json";
+            string currentDllPath = AppDomain.CurrentDomain.BaseDirectory;
+            Console.WriteLine($"App root : {currentDllPath}");
+            string jsonConfigPath =Path.Combine(currentDllPath, @"config.json");
+            string jsonConfigSchemaPath = Path.Combine(currentDllPath, @"config_schema.json");
+            string jsonTargetPath = Path.Combine(currentDllPath, @"targets.json");
+            string jsonTargetSchemaPath = Path.Combine(currentDllPath, @"targets_schema.json");
 
             using (var sr = new StreamReader(jsonConfigPath))
             {
